@@ -17,18 +17,18 @@
 	
 	4. Change trust (changeTrust.js)
 		
-		a. For the Distribution account to be able to receive a custom asset, here the SYL token, it has to create a trustline, i.e. Distribution account accepts SYL tokens.
+		a. For the Distribution account to be able to receive a custom asset, here the TKN token, it has to create a trustline, i.e. Distribution account accepts TKN tokens.
 		
-		b. This step corresponds to the fact that if the Issuer says that 1 SYL corresponds to 1 orange, the Distributor trusts he is saying the truth and can exchange his N SYL for N oranges at any time.
+		b. This step corresponds to the fact that if the Issuer says that 1 TKN corresponds to 1 orange, the Distributor trusts he is saying the truth and can exchange his N TKN for N oranges at any time.
 	
 	5. Create asset (createAsset.js)
 		
 		a. The Issuing account will now create the new asset and send it to the Distribution account via a payment operation.
 		
-		b. An asset is simply defined by its name (here it is SYL) and an issuing account.
+		b. An asset is simply defined by its name (here it is TKN) and an issuing account.
 		
 		c. This information can be shared across the Stellar network via a toml file, but I omit this step here as it is not mandatory, just convenient.
-		d. The Distribution account has now a balance of N SYL
+		d. The Distribution account has now a balance of N TKN
 	
 	6. Lock Issuing account (lockIssuingAccount.js)
 		
@@ -36,7 +36,7 @@
 		
 		b. Token distribution (tokenDistribution.js)
 		
-		c. This distribution is simply made by publicizing that the SYL token is to sell with a price per unit in exchange of XLMs. This is part of the Stellar protocols, and the Stellar network will resolve these orders on its own when there is a match.
+		c. This distribution is simply made by publicizing that the TKN token is to sell with a price per unit in exchange of XLMs. This is part of the Stellar protocols, and the Stellar network will resolve these orders on its own when there is a match.
 	
 	7. Token purchaseToken purchase (purchaseToken.js)purchaseToken.js
 		

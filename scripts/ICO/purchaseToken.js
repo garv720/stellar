@@ -7,7 +7,7 @@ const { buyer, issuer } = require("../../pairs.json");
 const main = async () => {
   const rootAccount = await server.loadAccount(buyer.publicKey);
 
-  const mobiAsset = new Stellar.Asset("MOBI", issuer.publicKey);
+  const tknAsset = new Stellar.Asset("TKN", issuer.publicKey);
 
   const txOptions = {
     fee: await server.fetchBaseFee(),
@@ -15,13 +15,13 @@ const main = async () => {
   };
 
   const changeTrustOpts = {
-    asset: mobiAsset,
+    asset: tknAsset,
     limit: "500"
   };
 
   const manageSellOfferOpts = {
     selling: Stellar.Asset.native(),
-    buying: mobiAsset,
+    buying: tknAsset,
     amount: "1",
     price: "1"
   };

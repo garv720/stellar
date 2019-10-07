@@ -15,10 +15,10 @@ const main = async () => {
     distributer.publicKey
   );
 
-  const mobiAsset = new Stellar.Asset("MOBI", issuer.publicKey);
+  const tknAsset = new Stellar.Asset("TKN", issuer.publicKey);
 
   const changeTrustOpts = {
-    asset: mobiAsset,
+    asset: tknAsset,
     limit: "1000"
   };
 

@@ -7,7 +7,7 @@ const server = new Stellar.Server('https://horizon-testnet.stellar.org');
 const main = async () => {
   const issuingAccount = await server.loadAccount(issuer.publicKey);
 
-  const mobiAsset = new Stellar.Asset("MOBI", issuer.publicKey);
+  const tknAsset = new Stellar.Asset("TKN", issuer.publicKey);
 
   const txOptions = {
     fee: await await server.fetchBaseFee(),
@@ -15,7 +15,7 @@ const main = async () => {
   };
 
   paymentOpts = {
-    asset: mobiAsset,
+    asset: tknAsset,
     destination: distributer.publicKey,
     amount: "1000"
   };

@@ -8,7 +8,7 @@ const main = async () => {
     distributer.publicKey
   );
 
-  const mobiAsset = new Stellar.Asset("MOBI", issuer.publicKey);
+  const tknAsset = new Stellar.Asset("TKN", issuer.publicKey);
 
   const txOptions = {
     fee: await await server.fetchBaseFee(),
@@ -16,7 +16,7 @@ const main = async () => {
   };
 
   const manageSellOfferOpts = {
-    selling: mobiAsset,
+    selling: tknAsset,
     buying: Stellar.Asset.native(),
     amount: "1000.00000000",
     price: "1.00000000"
